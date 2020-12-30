@@ -11,16 +11,24 @@ Module Javascript / Test me please: <p id="demo"></p>
   
 <script type="module">
 import { counter as testvar } from './lib/counter.js'; 
-import { decrement as testdec } from './lib/counter.js';   
+import { decrement as testdec } from './lib/counter.js';
+import { increment as testinc } from './lib/counter.js';
 import * as c1 from './lib/counter.js';
   
-console.log("Info:",testvar); // 1  
-console.log("Info1:",c1.counter); // 1
-c1.increment();
-console.log("Info2:",c1.counter); // 2
+console.log("Info1:",testvar); // 1
+testinc();
+console.log("Info2:",testvar); // 2  
 testdec();
+testdec();
+console.log("Info:3",testvar); // 0  
+
+console.log("Info1:",c1.counter); // 0
+c1.increment();
+console.log("Info2:",c1.counter); // 1
 c1.decrement();  
-console.log("Info3:",c1.counter); // 0  
+c1.decrement();  
+console.log("Info3:",c1.counter); // -1  
+  
 </script>  
 
 </body>
