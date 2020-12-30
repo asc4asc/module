@@ -1,4 +1,4 @@
-import * as counter from 'lib/counter.js';
+import * as counter from './lib/counter.js';
 
 console.log(counter.counter); // 1
 counter.increment();
