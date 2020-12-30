@@ -8,8 +8,12 @@
 <center>    
 Module Javascript / Test me please: <p id="demo"></p>
 </center>
-  
-<script src="main.js"></script>    
+<script type="module">
+import * as counter from 'lib/counter.js';
 
+console.log(counter.counter); // 1
+counter.increment();
+console.log(counter.counter); // 2
+</script>  
 </body>
 </html>
