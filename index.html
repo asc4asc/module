@@ -13,6 +13,7 @@ Module Javascript / Test me please: <p id="demo"></p>
 import { counter as testvar } from './lib/counter.js';  
 import * as c1 from './lib/counter.js';
   
+console.log("Info1:",testvar.counter); // 1  
 console.log("Info1:",c1.counter); // 1
 c1.increment();
 console.log("Info2:",c1.counter); // 2
